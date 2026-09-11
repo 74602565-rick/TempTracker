@@ -4,33 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temp Tracker</title>
-
     <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
-    <script src="./codigo.js"></script>
     <div class="contenedor">
         <div class="buscador">
             <input 
-            type="text"
-            placeholder="Ingresa nombre de la ciudad"
-            spellcheck="false"
-            autocomplete="false"
-            id="input-ciudad"/>
+                type="text"
+                placeholder="Ingresa nombre de la ciudad"
+                spellcheck="false"
+                autocomplete="off"
+                id="input-ciudad"/>
 
             <button onclick="obtenerClima()">
-                <img src="imagenes/lupa1-icon.png">
+                <img src="imagenes/lupa1-icon.png" alt="Buscar">
             </button>
         </div>
 
         <div class="clima-info">
             <p class="clima-texto">Parcialmente nublado</p>
-            <img src="imagenes/clima-removebg-preview.png" class="clima-icono"/>
-            <h1 class="Temp">22°c</h1>
+            <img src="imagenes/clima-removebg-preview.png" class="clima-icono" alt="Icono clima"/>
+            <h1 class="temp">22°C</h1>
             <h2 class="ciudad">Huancayo</h2>
+            
             <div class="detalles">
                 <div class="col">
-                    <img src="imagenes/humedad-removebg-preview.png"/>
+                    <img src="imagenes/humedad-removebg-preview.png" alt="Humedad"/>
                     <div>
                         <p class="humedad">50%</p>
                         <p>Humedad</p>
@@ -38,14 +37,17 @@
                 </div>
 
                 <div class="col">
-                    <img src="imagenes/viento-removebg-preview.png"/>
+                    <img src="imagenes/viento-removebg-preview.png" alt="Viento"/>
                     <div>
-                        <p class="viento">15 Km/h</p>
+                        <p class="viento">15 km/h</p>
                         <p>Viento</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- El script debe ir al final del body para que encuentre los elementos del DOM -->
+    <script src="./codigo.js"></script>
 </body>
 </html>

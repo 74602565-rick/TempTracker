@@ -3,24 +3,36 @@ const idioma = 'es';
 const inpCiudad = document.getElementById('input-ciudad');
 
 async function obtenerClima() {
-    const ciudad = inpCiudad.value;
+    const ciudad = inpCiudad.value.trim();
 
     if (!ciudad) {
-        alert('Por favor, ingrese una ciudad')
+        alert('Por favor, ingrese una ciudad');
+        return;
     }
 
-    const apiClimaActual = 'https://api.weatherapi.com/v1/current.json?q=${ciudad}&lang=${idioma}&key=${claveApi}';
+    // Uso de comillas invertidas `` para interpolación de variables
+    const apiClimaActual = `https://api.weatherapi.com/v1/current.json?q=${ciudad}&lang=${idioma}&key=${claveApi}`;
 
-    const response = await fetch(apiClimaActual);
-    const data = await response.json();
+    try {
+        const response = await fetch(apiClimaActual);
+        
+        if (!response.ok) {
+            alert('Ciudad no encontrada');
+            return;
+        }
 
-    mostrarClima(data);
+        const data = await response.json();
+        mostrarClima(data);
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Ocurrió un error al consultar el clima.');
+    }
 }
 
-function mostrarClima(data){
-    document.querySelector('.clima-icono').src = data.current.condition.icon;
-    document.querySelector('.clima-texto').innerHTML = data.current.condition.texto;
-    document.querySelector('.temp').innerHTML = data.current.temp_c + '°C';
+function mostrarClima(data) {
+    document.querySelector('.clima-icono').src = "https:" + data.current.condition.icon;
+    document.querySelector('.clima-texto').innerHTML = data.current.condition.text;
+    document.querySelector('.temp').innerHTML = Math.round(data.current.temp_c) + '°C';
     document.querySelector('.ciudad').innerHTML = data.location.name;
     document.querySelector('.humedad').innerHTML = data.current.humidity + '%';
     document.querySelector('.viento').innerHTML = data.current.wind_kph + ' km/h';
