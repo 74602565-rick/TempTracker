@@ -7,4 +7,4 @@ const apiClimaActual = 'https://api.weatherapi.com/v1/current.json?q=${ciudad}&l
 const response = await fetch(apiClimaActual);
 let data = await response.json();
 
-console.log(data.location.localtime);
+console.log(data.location.localtime); 
