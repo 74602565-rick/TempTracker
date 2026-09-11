@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Tracker</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <script src="./codigo.js"></script>
+    <div class="contenedor">
+        <div class="buscador">
+            <input 
+            type="text"
+            placeholder="Ingresa nombre de la ciudad"
+            spellcheck="false"
+            autocomplete="false"
+            id="input-ciudad"/>
+
+            <button onclick="obtenerClima()">
+                <img src="imagenes/lupa1-icon.png">
+            </button>
+        </div>
+
+        <div class="clima-info"></div>
+    </div>
+</body>
+</html>
