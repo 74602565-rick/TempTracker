@@ -107,6 +107,9 @@ h2 {
 }
 
 .des{
-    font-size: 30px;
+    font-size: 15px;
     align-items: center;
+    margin-top: 25px;
+    margin-bottom: -25px;
+    color: antiquewhite;
 }
