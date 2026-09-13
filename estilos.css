@@ -22,17 +22,19 @@ body {
     max-width: 470px;
     color: #fff;
     margin: 100px auto 0;
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 40px 35px;
     text-align: center;
 
-    background: linear-gradient(125deg, #00feba, #5b548a);
+    background: rgba(255, 255, 255, 0.12);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
 }
 
 .buscador {
