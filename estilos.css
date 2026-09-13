@@ -111,5 +111,9 @@ h2 {
     align-items: center;
     margin-top: 25px;
     margin-bottom: -25px;
-    color: aliceblue, !important;
+}
+
+a{
+    color: aliceblue;
+    text-decoration: none;
 }
