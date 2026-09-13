@@ -116,4 +116,9 @@ h2 {
 a{
     color: aliceblue;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: cornflowerblue;
 }
