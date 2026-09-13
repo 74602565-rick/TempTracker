@@ -6,18 +6,33 @@
 }
 
 body {
-    background: #222;
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: url('imagenes/HD-wallpaper-city-at-sunset-urban-city-sunrise-sunset.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .contenedor {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(125deg, #00feba, #5b548a);
     color: #fff;
     margin: 100px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
     text-align: center;
+
+    background: linear-gradient(125deg, #00feba, #5b548a);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .buscador {
